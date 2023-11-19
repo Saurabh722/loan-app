@@ -5,9 +5,7 @@ const initUser = {
     firstName: '',
     lastName: '',
     email: '',
-    displayName: '',
-    password: '',
-    confirmPassword: ''
+    password: ''
 };
 
 export const UserContext = createContext(initUser);
