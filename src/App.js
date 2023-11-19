@@ -24,7 +24,7 @@ function App() {
             <Route path="/account" Component={Account} />
             <Route path="/loan" Component={Loan} />
           </Routes>
-        <footer><span className='copy-right'>© 2023 | Demyst</span></footer>
+        <footer><span className='copy-right' data-testid='footer'>© 2023 | Demyst</span></footer>
       </UserProvider>
     </div>
   );
