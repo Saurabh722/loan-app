@@ -8,8 +8,7 @@ import { UserContext } from '../../context/userContext';
 export default function Headers() {
     const { userId } = useContext(UserContext);
     return <header>
-        <h1>Demyst Bank
-        </h1>
+        <h1 data-testid="header-text">Demyst Bank</h1>
         {userId && <Link to='./account' className='profile-btn'>
             <img className="avatar" src={avatar} />
         </Link>}
