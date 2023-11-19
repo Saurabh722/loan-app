@@ -3,12 +3,12 @@ import './App.scss';
 import { Routes, Route } from 'react-router-dom';
 
 import Header from './components/header';
-import Init from './home/init';
-import Home from './home';
-import Login from './user/login';
-import Register from './user/register';
-import Account from './user/account';
-import Loan from './loan';
+import Init from './pages/home/init';
+import Home from './pages/home';
+import Login from './pages/user/login';
+import Register from './pages/user/register';
+import Account from './pages/user/account';
+import Loan from './pages/loan';
 import { UserProvider } from './context/userContext';
 
 function App() {

@@ -1,9 +1,9 @@
 import { useContext } from 'react';
 import { Navigate, useNavigate } from 'react-router-dom';
 
-import { UserContext } from '../../context/userContext';
+import { UserContext } from '../../../context/userContext';
 
-import logout from '../../services/logout.js';
+import logout from '../../../services/logout.js';
 
 export default function Account() {
   const navigate = useNavigate();
@@ -24,9 +24,6 @@ export default function Account() {
           user && <div className="form">
             <div className='view-set'>
               <span>UserName:</span><span>{user.userId || ''}</span>
-            </div>
-            <div className='view-set'>
-              <span>Display Name:</span><span>{user.displayName || ''}</span>
             </div>
             <div className='view-set'>
               <span>First Name:</span><span>{user.firstName || ''}</span>

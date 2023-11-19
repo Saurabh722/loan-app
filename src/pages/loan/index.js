@@ -1,8 +1,8 @@
 import { useState, useContext } from 'react';
 
-import { UserContext } from '../context/userContext';
-import fetchBalanceSheet from '../services/fetchBalanceSheet';
-import fetchLoanDecision from '../services/fetchLoanDecision';
+import { UserContext } from '../../context/userContext';
+import fetchBalanceSheet from '../../services/fetchBalanceSheet';
+import fetchLoanDecision from '../../services/fetchLoanDecision';
 
 import QueryForm from './query-form';
 import LoanStatus from './loan-status';

@@ -2,8 +2,8 @@ import { useState, useContext } from 'react';
 
 import { Navigate, Link } from 'react-router-dom';
 
-import { UserContext, UserDispatchContext } from './../../context/userContext';
-import login from '../../services/login.js';
+import { UserContext, UserDispatchContext } from './../../../context/userContext';
+import login from '../../../services/login.js';
 
 const initUser = {
   userId: '',

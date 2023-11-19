@@ -1,22 +1,27 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Navigate, Link } from 'react-router-dom';
 
-import registerUser from '../../services/registerUser.js';
+import registerUser from '../../../services/registerUser.js';
 
 const initUser = {
   userId: '',
   firstName: '',
   lastName: '',
-  email: '',
-  displayName: ''
+  email: ''
 }
 
 export default function Register() {
   const [user, setUser] = useState(initUser);
+  const [isAuth, setIsAuth] = useState(false);
+
+  if (isAuth) {
+    return <Navigate to="/login" />
+  }
 
   async function onUserRegister() {
-    console.log(user);
-    registerUser({ user });
+    const { isAuth } = await registerUser({ user });
+    
+    setIsAuth(isAuth);
   }
 
   const onChangeHandler = (event) => {
@@ -36,19 +41,13 @@ export default function Register() {
               <input placeholder='UserName' name="userId" onChange={onChangeHandler} />
             </div>
             <div className="form-set">
-              <input placeholder='Password' name="password" onChange={onChangeHandler} />
-            </div>
-            <div className="form-set">
-              <input placeholder='ConfirmPassword' name="confirmPassword" onChange={onChangeHandler} />
+              <input type="password" placeholder='Password' name="password" onChange={onChangeHandler} />
             </div>
             <div className="form-set">
               <input placeholder='firstName' name="firstName" onChange={onChangeHandler} />
             </div>
             <div className="form-set">
               <input placeholder='lastName' name="lastName" onChange={onChangeHandler} />
-            </div>
-            <div className="form-set">
-              <input placeholder='displayName' name="displayName" onChange={onChangeHandler} />
             </div>
             <div className="form-set">
               <input placeholder='email' name="email" onChange={onChangeHandler} />

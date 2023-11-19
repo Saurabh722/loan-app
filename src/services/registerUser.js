@@ -11,7 +11,7 @@ async function registerUser(data) {
         const resJson = await response.json();
 
         if (resJson) {
-            console.log(resJson);
+            return resJson;
         } else {
             console.log("Some thing went wrong.");
         }
