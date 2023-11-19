@@ -1,0 +1,185 @@
+.App {
+  text-align: center;
+}
+
+.main {
+
+}
+
+header {
+  background: #1956c9;
+  color: #fff;
+  padding: 5px;
+
+  h1 {
+    margin: 0;
+  }
+}
+
+.form {
+  max-width: 420px;
+  min-width: 300px;
+  margin: auto;
+
+  .form-set,
+  .view-set {
+    margin: 30px auto;
+  }
+  
+  .view-set {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  input,
+  select {
+    width: calc(100% - 33px);
+    height: 35px;
+    border-radius: 25px;
+    font-size: 1.2em;
+    padding: 5px 5px 5px 20px;
+    border: 2px solid #809fda;
+    box-shadow: 0 0 5px #b7b7b7;
+  }
+
+  select {
+    width: 100%;
+    height: 45px;
+  }
+}
+
+.profile-btn {
+  position: absolute;
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  right: 10px;
+  top: 6px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  cursor: pointer;
+  overflow: hidden;
+
+  &:hover {
+    border: 1px solid #1956c9;
+    box-shadow: 0 0 3px #fff;
+  }
+}
+.avatar {
+  width: 36px;
+}
+
+.table {
+  display: block;
+}
+
+.light-text {
+  color: #777;
+}
+
+footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+
+  .copy-right {
+    font-size: 9px;
+  }
+}
+
+.description {
+
+}
+
+.btn {
+  width: 200px;
+  height: 50px;
+  border-radius: 25px;
+  border: 1px solid #fff;
+  box-shadow: 0 0 10px #1956c9;
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+  justify-content: center;
+  text-decoration: none;
+  font-weight: bolder;
+  background: #1956c9;
+  color: #fff;
+  margin: 30px auto;
+
+  &.light {
+    color: #1956c9;
+    background: #fff;
+  }
+
+  &.small {
+    width: 100px;
+    height: 30px;
+  }
+
+  &.large {
+    width: 100%;
+  }
+}
+
+.center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  &.bottom {
+    top: 80%;
+  }
+}
+
+.balance_sheet {
+  width: 720px;
+  max-height: 70vh;
+  margin: 20px auto;
+  border: 1px solid #aaa;
+  padding: 5px;
+  overflow: auto;
+}
+
+.table {
+  .table_header,
+  .row {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    border-bottom: 1px solid #eee;
+  }
+  .table_header {
+    font-weight: bold;
+    border-bottom: 1px solid #aaa;
+  }
+  .title {
+    display: flex;
+    background: #1956c9d4;
+    justify-content: center;
+    color: #fff;
+    position: -webkit-sticky;
+    position: sticky;
+    top: -1px;
+  }
+}
+
+.loan-status-view {
+  max-width: 420px;
+  margin: auto;
+
+  h3 {
+    line-height: 30px;
+    color: #1da41d;
+  }
+}
+
+
+/* Mobile */
+@media (max-width: 700px) {
+  .content {
+    padding: 4rem;
+  }
+}
