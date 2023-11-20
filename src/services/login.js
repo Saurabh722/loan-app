@@ -12,10 +12,10 @@ async function login(data) {
 
         const resJson = await response.json();
 
-        util.authHandler(resJson);
+        // util.authHandler(resJson);
 
-        if (resJson?.data) {
-            return resJson.data;
+        if (resJson) {
+            return resJson;
         } else {
             return "Error";
         }
